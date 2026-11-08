@@ -1,0 +1,5 @@
+interface:
+  display_name: "agent-normal"
+  short_description: "显式调用经典三角色集群，逐角色确认本轮模型与推理强度"
+policy:
+  allow_implicit_invocation: false

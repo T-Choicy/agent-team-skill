@@ -1,0 +1,5 @@
+interface:
+  display_name: "agent-team-skill"
+  short_description: "手动调用两个 agents 集群，逐角色确认模型并保留独立审查与验证证据"
+policy:
+  allow_implicit_invocation: false
