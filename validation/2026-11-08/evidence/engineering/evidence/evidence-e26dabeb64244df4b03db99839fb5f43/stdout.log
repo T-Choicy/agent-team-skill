@@ -1,2 +1,0 @@
-Frozen independent engineering checks PASS: snapshot/design identity, exact scope, imported source identity, silent import, API, strict invalid inputs at zero steps, near-boundary sample structure, finite short-run values and independent calls.
-Frozen engineering suite: 7 tests PASS.
