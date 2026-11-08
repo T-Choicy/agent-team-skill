@@ -1,0 +1,13 @@
+{
+  "argv": [
+    "python",
+    "-B",
+    "C:/Users/Administrator/.codex/plugins/cache/t-choicy-skills/agent-team-skill/0.1.0/skills/agent-team-skill/scripts/evidence.py",
+    "check",
+    "C:\\Users\\Administrator\\source\\agent-team-skill\\.agent-team\\b1c46ce1e70740dc8afbf29b294e168c\\snapshots\\snapshot-7af7e869a80a43bea3e11ddcba3e0c35\\snapshot.json"
+  ],
+  "exit_code": 0,
+  "stdout": "{\"snapshot_id\": \"b58c8cc496e6a466d10360c9b6d244e1677721986c5514a57580c5f71422d39f\", \"revision\": \"9a0cf9012f3647c78f9cb924e61c069d\", \"design_id\": \"2e33e2bad7e95f44181c71a66e49f54144d6c05aecfa9b58c72b48a1095813e9\", \"created_at\": \"2026-11-08T12:34:06.156584+00:00\", \"hashes\": {\"status_counts.py\": \"99629bc970950d17f5ebcce688452c215231778e2cd0028b6ad55dffa66e71f4\", \"test_status_counts.py\": \"536fb028a8dcb13566fe651e7f06a1bf53de0d1707dae33824bfd4d0939b4cce\"}}\n",
+  "stderr": "",
+  "actor": "root coordinator; not independentreview"
+}

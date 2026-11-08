@@ -1,0 +1,199 @@
+{
+  "run_id": "b1c46ce1e70740dc8afbf29b294e168c",
+  "cluster": "classic",
+  "task": "Implement a tiny pure function tally_statuses(statuses) that counts exact allowed task statuses pending/running/done/failed, rejects invalid items without changing input; standard-library Python. This is a real bounded implementation workflow trial.",
+  "workspace": "C:\\Users\\Administrator\\source\\agent-team-skill\\validation\\2026-11-08\\classic",
+  "records": "C:\\Users\\Administrator\\source\\agent-team-skill\\.agent-team\\b1c46ce1e70740dc8afbf29b294e168c",
+  "authorized_files": [
+    "status_counts.py",
+    "test_status_counts.py"
+  ],
+  "write_owner": "/root/trial_classic_laborer",
+  "phase": "accepted",
+  "roles": {
+    "sentry": {
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "confirmed_by_user": true,
+      "agent_id": "/root/trial_classic_sentry"
+    },
+    "debater": {
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "confirmed_by_user": true,
+      "agent_id": "/root/trial_classic_debater"
+    },
+    "laborer": {
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "confirmed_by_user": true,
+      "agent_id": "/root/trial_classic_laborer"
+    }
+  },
+  "design_id": "2e33e2bad7e95f44181c71a66e49f54144d6c05aecfa9b58c72b48a1095813e9",
+  "snapshot_id": "b58c8cc496e6a466d10360c9b6d244e1677721986c5514a57580c5f71422d39f",
+  "tasks": [
+    {
+      "id": "facts",
+      "owner": "sentry",
+      "status": "done",
+      "depends_on": []
+    },
+    {
+      "id": "design",
+      "owner": "debater",
+      "status": "done",
+      "depends_on": [
+        "facts"
+      ]
+    },
+    {
+      "id": "design_review",
+      "owner": "sentry",
+      "status": "done",
+      "depends_on": [
+        "design"
+      ]
+    },
+    {
+      "id": "implementation",
+      "owner": "laborer",
+      "status": "done",
+      "depends_on": [
+        "design_review"
+      ]
+    },
+    {
+      "id": "delivery",
+      "owner": "sentry",
+      "status": "done",
+      "depends_on": [
+        "implementation"
+      ]
+    },
+    {
+      "id": "freeze",
+      "owner": "coordinator",
+      "status": "done",
+      "depends_on": [
+        "delivery"
+      ]
+    },
+    {
+      "id": "validation",
+      "owner": "sentry",
+      "status": "done",
+      "depends_on": [
+        "freeze"
+      ]
+    },
+    {
+      "id": "acceptance",
+      "owner": "debater",
+      "status": "done",
+      "depends_on": [
+        "validation"
+      ]
+    }
+  ],
+  "boundary": "Minimal happy-path real-role workflow trial; does not validate every failure branch or production physics.",
+  "design_review": {
+    "actor": "/root/trial_classic_sentry",
+    "design_id": "2e33e2bad7e95f44181c71a66e49f54144d6c05aecfa9b58c72b48a1095813e9",
+    "verdict": "PASS",
+    "exit_code": 0,
+    "observed_sha256": "2e33e2bad7e95f44181c71a66e49f54144d6c05aecfa9b58c72b48a1095813e9",
+    "commands": [
+      "Get-Content -LiteralPath C:\\Users\\Administrator\\source\\agent-team-skill\\.agent-team\\b1c46ce1e70740dc8afbf29b294e168c\\design-v2.md",
+      "Get-Content -LiteralPath C:\\Users\\Administrator\\source\\agent-team-skill\\.agent-team\\b1c46ce1e70740dc8afbf29b294e168c\\scope-v2.json",
+      "Get-FileHash -Algorithm SHA256 -LiteralPath C:\\Users\\Administrator\\source\\agent-team-skill\\.agent-team\\b1c46ce1e70740dc8afbf29b294e168c\\design-v2.md"
+    ],
+    "coverage": "Exact builtin types, explicit compatibility change, regressions before membership and preserving original behavior for builtin inputs; design only."
+  },
+  "implementation": {
+    "actor": "/root/trial_classic_laborer",
+    "evidence": ".agent-team\\b1c46ce1e70740dc8afbf29b294e168c\\self-test\\evidence-6f54c726fa3d404e82a601dda36ce8be\\evidence.json",
+    "source_hashes": {
+      "status_counts.py": "ef8a55ce3cc490a0dcb042ef6c09df35e8f323530985c51c4f5e62aa5d0c8268",
+      "test_status_counts.py": "431e29458edbaa40f7f9f90c1b99a41f8afc42aad7a444f901435d6be10be9aa"
+    }
+  },
+  "snapshot_file": "C:\\Users\\Administrator\\source\\agent-team-skill\\.agent-team\\b1c46ce1e70740dc8afbf29b294e168c\\snapshots\\snapshot-7af7e869a80a43bea3e11ddcba3e0c35\\snapshot.json",
+  "delivery_review": {
+    "actor": "/root/trial_classic_sentry",
+    "verdict": "PASS",
+    "stage": "delivery",
+    "design_id": "015d210da5b7ee08850a4c3696c778024f7058ecb40aa21310bb42bbbe8559f6",
+    "evidence": [
+      "delivery-unit.json",
+      "delivery-probe.json"
+    ],
+    "boundary": "Inspection,9unit tests and independent contract probe; not yet frozen validation."
+  },
+  "snapshot_history": [
+    {
+      "snapshot_id": "e4667d9832b1aeefb616ec1561474b6e5b49ddd96e20ab3d207b39b27d496a39",
+      "snapshot_file": "C:\\Users\\Administrator\\source\\agent-team-skill\\.agent-team\\b1c46ce1e70740dc8afbf29b294e168c\\snapshots\\snapshot-cfe304100de24d38a2be739c08952312\\snapshot.json",
+      "status": "rejected_contract_failure",
+      "review": {
+        "actor": "/root/trial_classic_sentry",
+        "verdict": "FAIL",
+        "design_id": "015d210da5b7ee08850a4c3696c778024f7058ecb40aa21310bb42bbbe8559f6",
+        "snapshot_id": "e4667d9832b1aeefb616ec1561474b6e5b49ddd96e20ab3d207b39b27d496a39",
+        "evidence": "frozen-v1-subclass-failure.json",
+        "reason": "Approved str-subclass acceptance violated by unhashable valid-text str subclass; prior PASS only covered prior probes."
+      }
+    }
+  ],
+  "design_history": [
+    {
+      "design_id": "015d210da5b7ee08850a4c3696c778024f7058ecb40aa21310bb42bbbe8559f6",
+      "file": "design-v1.md",
+      "status": "superseded_after_frozen_contract_failure"
+    }
+  ],
+  "revision": 2,
+  "implementation_v2": {
+    "actor": "/root/trial_classic_laborer",
+    "evidence": "self-test-v2/evidence-af920dffb9c8494e9c9475e69160fa3b/evidence.json",
+    "source_hashes": {
+      "status_counts.py": "99629bc970950d17f5ebcce688452c215231778e2cd0028b6ad55dffa66e71f4",
+      "test_status_counts.py": "536fb028a8dcb13566fe651e7f06a1bf53de0d1707dae33824bfd4d0939b4cce"
+    },
+    "tests": 10
+  },
+  "delivery_review_v2": {
+    "actor": "/root/trial_classic_sentry",
+    "design_id": "2e33e2bad7e95f44181c71a66e49f54144d6c05aecfa9b58c72b48a1095813e9",
+    "verdict": "PASS",
+    "stage": "delivery_v2",
+    "evidence": [
+      "delivery-v2-unit.json",
+      "delivery-v2-probe.json"
+    ],
+    "coverage": "Exacttype guard beforemembership;10tests and independentv2regressions; notfinalfrozenvalidation."
+  },
+  "final_review": {
+    "actor": "/root/trial_classic_sentry",
+    "design_id": "2e33e2bad7e95f44181c71a66e49f54144d6c05aecfa9b58c72b48a1095813e9",
+    "snapshot_id": "b58c8cc496e6a466d10360c9b6d244e1677721986c5514a57580c5f71422d39f",
+    "verdict": "PASS",
+    "evidence": [
+      "frozen-v2-unit.json",
+      "frozen-v2-probe.json"
+    ],
+    "identity_check": {
+      "exit_code": 0,
+      "stdout": "Independent v2 design/scope/snapshot identity PASS",
+      "stderr": ""
+    },
+    "boundary": "Exact frozenv2built-in-type contract; v1strsubclassfailure remains unrepaired underoldcontract and is superseded explicitly."
+  },
+  "acceptance": {
+    "decision": "PASS finite v2 classic workflow trial",
+    "coordinator": "/root",
+    "independent_reviewer": "/root/trial_classic_sentry",
+    "designer_recommendation": "/root/trial_classic_debater recommends closure based on independent PASS, not self-review",
+    "boundary": "Exact builtin list/str toy task and observed repair path only; no universal branch/production/physics proof."
+  }
+}

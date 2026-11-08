@@ -1,0 +1,33 @@
+{
+  "argv": [
+    "python",
+    "-B",
+    "-c",
+    "from status_counts import tally_statuses\nclass L(list): pass\nclass S(str): pass\nkeys = ['pending', 'running', 'done', 'failed']\nitems = L([S('failed'), 'pending', S('done'), 'failed'])\nbefore = items.copy()\nout = tally_statuses(items)\nassert type(out) is dict and list(out) == keys\nassert out == {'pending': 1, 'running': 0, 'done': 1, 'failed': 2}\nassert items == before and all(a is b for a, b in zip(items, before))\nassert tally_statuses([]) == dict.fromkeys(keys, 0)\nout['failed'] = -1\nassert tally_statuses(items)['failed'] == 2\nfor value, error in [(['pending', 'DONE', None], ValueError), (['done', {}, 'bad'], TypeError), (['', 'done'], ValueError), (['done', True], TypeError)]:\n    before = value.copy()\n    try: tally_statuses(value)\n    except error as exc: assert '[' in str(exc)\n    else: raise AssertionError('invalid input accepted')\n    assert value == before and all(a is b for a, b in zip(value, before))\nfor value in (None, 'done', ('done',), {'done': 1}, iter(['done'])):\n    try: tally_statuses(value)\n    except TypeError: pass\n    else: raise AssertionError('invalid container accepted')\nprint('Independent contract assertions PASS')"
+  ],
+  "cwd": "C:\\Users\\Administrator\\source\\agent-team-skill\\validation\\2026-11-08\\classic",
+  "design_id": "015d210da5b7ee08850a4c3696c778024f7058ecb40aa21310bb42bbbe8559f6",
+  "started_at": "2026-11-08T12:26:38.973904+00:00",
+  "before_hashes": {
+    "status_counts.py": "ef8a55ce3cc490a0dcb042ef6c09df35e8f323530985c51c4f5e62aa5d0c8268",
+    "test_status_counts.py": "431e29458edbaa40f7f9f90c1b99a41f8afc42aad7a444f901435d6be10be9aa"
+  },
+  "exit_code": 0,
+  "stdout": "Independent contract assertions PASS\r\n",
+  "stderr": "",
+  "valid": true,
+  "after_hashes": {
+    "status_counts.py": "ef8a55ce3cc490a0dcb042ef6c09df35e8f323530985c51c4f5e62aa5d0c8268",
+    "test_status_counts.py": "431e29458edbaa40f7f9f90c1b99a41f8afc42aad7a444f901435d6be10be9aa"
+  },
+  "ended_at": "2026-11-08T12:26:39.026049+00:00",
+  "snapshot_id": "e4667d9832b1aeefb616ec1561474b6e5b49ddd96e20ab3d207b39b27d496a39",
+  "snapshot_copy_before_hashes": {
+    "status_counts.py": "ef8a55ce3cc490a0dcb042ef6c09df35e8f323530985c51c4f5e62aa5d0c8268",
+    "test_status_counts.py": "431e29458edbaa40f7f9f90c1b99a41f8afc42aad7a444f901435d6be10be9aa"
+  },
+  "snapshot_copy_after_hashes": {
+    "status_counts.py": "ef8a55ce3cc490a0dcb042ef6c09df35e8f323530985c51c4f5e62aa5d0c8268",
+    "test_status_counts.py": "431e29458edbaa40f7f9f90c1b99a41f8afc42aad7a444f901435d6be10be9aa"
+  }
+}

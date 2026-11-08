@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "python",
+    "-B",
+    "-c",
+    "import hashlib,json\nfrom pathlib import Path\nr=Path('C:/Users/Administrator/source/agent-team-skill/.agent-team/04d3e750cd60458a9671f93e05e2e909')\nd=r/'design-v1.md'\ns=json.loads((r/'scope.json').read_text(encoding='utf-8'))\nexpected='a4004d1d22ebd3c55af012fb7e10f9982c8f79ac249f2cb928d1e1575c8be441'\nactual=hashlib.sha256(d.read_bytes()).hexdigest()\nassert actual==expected==s['design_id']\nassert s['files']==['oscillator.py','test_oscillator.py']\nassert Path(s['workspace']).resolve()==Path.cwd().resolve()\ntext=d.read_text(encoding='utf-8')\nfor term in ['excluding bool','Validate both arguments before allocating','steps+1','O(steps)','TypeError','ValueError','unittest.main','20000','[3.5,4.5]','Independent delivery review precedes freeze']:\n    assert term in text,term\nprint('Design hash, exact scope, workspace and stated API/validation/verification clauses checked.')\nprint('design_id='+actual)\nprint('source_present='+str({n:(Path.cwd()/n).exists() for n in s['files']}))"
+  ],
+  "cwd": "C:\\Users\\Administrator\\source\\agent-team-skill\\validation\\2026-11-08\\engineering",
+  "design_id": "a4004d1d22ebd3c55af012fb7e10f9982c8f79ac249f2cb928d1e1575c8be441",
+  "snapshot": null,
+  "started_at": "2026-11-08T12:21:19.202990+00:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "valid": true,
+  "before_hashes": {
+    "oscillator.py": null,
+    "test_oscillator.py": null
+  },
+  "after_hashes": {
+    "oscillator.py": null,
+    "test_oscillator.py": null
+  },
+  "ended_at": "2026-11-08T12:21:19.315480+00:00"
+}

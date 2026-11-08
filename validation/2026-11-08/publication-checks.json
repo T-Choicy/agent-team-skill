@@ -1,0 +1,59 @@
+[
+  {
+    "actor": "root publication check; not independentrolevalidation",
+    "argv": [
+      "python",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "validation/2026-11-08/engineering",
+      "-p",
+      "test_oscillator.py",
+      "-v"
+    ],
+    "cwd": "C:\\Users\\Administrator\\source\\agent-team-skill",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_analytic_trajectory_and_times (test_oscillator.OscillatorTests.test_analytic_trajectory_and_times) ... ok\ntest_finite_duration_energy_bound (test_oscillator.OscillatorTests.test_finite_duration_energy_bound) ... ok\ntest_integer_dt (test_oscillator.OscillatorTests.test_integer_dt) ... ok\ntest_invalid_inputs (test_oscillator.OscillatorTests.test_invalid_inputs) ... ok\ntest_one_step (test_oscillator.OscillatorTests.test_one_step) ... ok\ntest_second_order_endpoint_convergence (test_oscillator.OscillatorTests.test_second_order_endpoint_convergence) ... ok\ntest_zero_steps (test_oscillator.OscillatorTests.test_zero_steps) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.008s\n\nOK\n"
+  },
+  {
+    "actor": "root publication check; not independentrolevalidation",
+    "argv": [
+      "python",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "validation/2026-11-08/classic",
+      "-p",
+      "test_status_counts.py",
+      "-v"
+    ],
+    "cwd": "C:\\Users\\Administrator\\source\\agent-team-skill",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_builtin_control (test_status_counts.TallyStatusesTests.test_builtin_control) ... ok\ntest_empty (test_status_counts.TallyStatusesTests.test_empty) ... ok\ntest_first_invalid_entry_controls_error (test_status_counts.TallyStatusesTests.test_first_invalid_entry_controls_error) ... ok\ntest_invalid_containers (test_status_counts.TallyStatusesTests.test_invalid_containers) ... ok\ntest_invalid_elements (test_status_counts.TallyStatusesTests.test_invalid_elements) ... ok\ntest_invalid_strings (test_status_counts.TallyStatusesTests.test_invalid_strings) ... ok\ntest_missing_statuses (test_status_counts.TallyStatusesTests.test_missing_statuses) ... ok\ntest_mixed (test_status_counts.TallyStatusesTests.test_mixed) ... ok\ntest_results_are_independent (test_status_counts.TallyStatusesTests.test_results_are_independent) ... ok\ntest_subclasses_are_rejected (test_status_counts.TallyStatusesTests.test_subclasses_are_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 10 tests in 0.001s\n\nOK\n"
+  },
+  {
+    "actor": "root publication check; not independentrolevalidation",
+    "argv": [
+      "python",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "skills/agent-team-skill/scripts",
+      "-p",
+      "test_evidence.py",
+      "-v"
+    ],
+    "cwd": "C:\\Users\\Administrator\\source\\agent-team-skill",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_cli_does_not_consume_child_options_and_preserves_history (test_evidence.EvidenceTests.test_cli_does_not_consume_child_options_and_preserves_history) ... ok\ntest_frozen_command_mutation_invalidates_even_on_exit_zero (test_evidence.EvidenceTests.test_frozen_command_mutation_invalidates_even_on_exit_zero) ... ok\ntest_real_command_exit_logs_and_argv (test_evidence.EvidenceTests.test_real_command_exit_logs_and_argv) ... ok\ntest_scope_paths_missing_sources_and_scope_mismatch (test_evidence.EvidenceTests.test_scope_paths_missing_sources_and_scope_mismatch) ... ok\ntest_snapshot_copy_drift_and_timeout (test_evidence.EvidenceTests.test_snapshot_copy_drift_and_timeout) ... ok\ntest_snapshot_drift_cannot_be_repaired_back_to_valid (test_evidence.EvidenceTests.test_snapshot_drift_cannot_be_repaired_back_to_valid) ... ok\n\n----------------------------------------------------------------------\nRan 6 tests in 1.003s\n\nOK\n"
+  }
+]

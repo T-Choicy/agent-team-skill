@@ -1,0 +1,5 @@
+design_sha256_verified
+short_max_x_v_error (0.0033007601628175787, 0.004016848344497531)
+long_energy_min_max_invariant_drift (0.49875000003203307, 0.5, 8.104628079763643e-14)
+endpoint_errors [0.014490078456986197, 0.0036168834128242635, 0.0009038774720954912] ratios [4.006233213271185, 4.001519591410011]
+PASS finite design feasibility only; no implementation present or validated

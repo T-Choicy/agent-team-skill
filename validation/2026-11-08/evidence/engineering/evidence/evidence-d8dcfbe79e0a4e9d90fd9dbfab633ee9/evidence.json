@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "python",
+    "-B",
+    "-c",
+    "import ast,contextlib,hashlib,io,json,math,unittest\nfrom pathlib import Path\nfrom decimal import Decimal\nfrom fractions import Fraction\nr=Path('C:/Users/Administrator/source/agent-team-skill/.agent-team/04d3e750cd60458a9671f93e05e2e909')\ns=json.loads((r/'scope.json').read_text(encoding='utf-8'))\nassert s['design_id']==hashlib.sha256((r/'design-v1.md').read_bytes()).hexdigest()=='a4004d1d22ebd3c55af012fb7e10f9982c8f79ac249f2cb928d1e1575c8be441'\nassert set(p.name for p in Path.cwd().iterdir())==set(s['files'])=={'oscillator.py','test_oscillator.py'}\nexpected={'oscillator.py':'109daea5138465b083c90f47ca2ab8f6b812eda5db5b73e06ff0d1d043caf067','test_oscillator.py':'30bb3b4f28b181529b537a234e0cdd3752891350e4efcff643f5e5d1b26a2220'}\nassert {p:hashlib.sha256(Path(p).read_bytes()).hexdigest() for p in s['files']}==expected\nbuf=io.StringIO()\nwith contextlib.redirect_stdout(buf),contextlib.redirect_stderr(buf):\n    import oscillator\n    from oscillator import solve\nassert buf.getvalue()==''\nassert [n.names[0].name for n in ast.walk(ast.parse(Path('oscillator.py').read_text())) if isinstance(n,ast.Import)]==['math']\nclass IntChild(int): pass\nclass FloatChild(float): pass\ncases=[(False,0,TypeError),(IntChild(1),0,TypeError),(FloatChild(.1),0,TypeError),(Fraction(1,10),0,TypeError),(Decimal('.1'),0,TypeError),(10**10000,0,ValueError),(.1,False,TypeError),(.1,IntChild(1),TypeError),(.1,-1,ValueError),(math.nan,0,ValueError),(2,0,ValueError)]\nfor dt,n,error in cases:\n    try: solve(dt,n)\n    except error: pass\n    else: raise AssertionError((type(dt),type(n),error))\nfor h in [1,0.125,math.nextafter(2,0),math.nextafter(0,1)]:\n    out=solve(h,7)\n    assert type(out) is list and len(out)==8 and out[0]==(0.,1.,0.)\n    assert all(type(row) is tuple and len(row)==3 and row[0]==n*h for n,row in enumerate(out))\na=solve(.1,1); a.append(('sentinel',)); assert len(solve(.1,1))==2\nassert solve(.1,0)==[(0.,1.,0.)]\nprint('Independent delivery: exact scope/hash, silent import, strict scalar types, invalid zero-step arguments, valid near-boundary steps, sample structure and independent calls PASS.')\nresult=unittest.TextTestRunner(verbosity=2).run(unittest.defaultTestLoader.loadTestsFromName('test_oscillator'))\nassert result.wasSuccessful() and result.testsRun==7"
+  ],
+  "cwd": "C:\\Users\\Administrator\\source\\agent-team-skill\\validation\\2026-11-08\\engineering",
+  "design_id": "a4004d1d22ebd3c55af012fb7e10f9982c8f79ac249f2cb928d1e1575c8be441",
+  "snapshot": null,
+  "started_at": "2026-11-08T12:24:28.491658+00:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "valid": true,
+  "before_hashes": {
+    "oscillator.py": "109daea5138465b083c90f47ca2ab8f6b812eda5db5b73e06ff0d1d043caf067",
+    "test_oscillator.py": "30bb3b4f28b181529b537a234e0cdd3752891350e4efcff643f5e5d1b26a2220"
+  },
+  "after_hashes": {
+    "oscillator.py": "109daea5138465b083c90f47ca2ab8f6b812eda5db5b73e06ff0d1d043caf067",
+    "test_oscillator.py": "30bb3b4f28b181529b537a234e0cdd3752891350e4efcff643f5e5d1b26a2220"
+  },
+  "ended_at": "2026-11-08T12:24:28.686653+00:00"
+}

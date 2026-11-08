@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "agent-team-skill",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "手动调用的工程物理与经典 agents 集群技能，逐角色确认模型并保留独立审查及验证证据。",
   "author": {
     "name": "T-Choicy"

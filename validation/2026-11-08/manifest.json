@@ -1,0 +1,473 @@
+{
+  "created_at_utc": "2026-11-08T12:39:32.991850+00:00",
+  "baseline_commit": "d7d7fca5062b55473125e8fd16f36310e8b255f6",
+  "models_confirmed_per_role": "gpt-6.1-sol / medium",
+  "runs": {
+    "engineering": {
+      "run_id": "04d3e750cd60458a9671f93e05e2e909",
+      "design_id": "a4004d1d22ebd3c55af012fb7e10f9982c8f79ac249f2cb928d1e1575c8be441",
+      "snapshot_id": "19bff99b32056818cd36a020f92463dd0428729b98164ecb8e806b1b42c1ca77",
+      "roles": {
+        "lead": {
+          "model": "gpt-6.1-sol",
+          "effort": "medium",
+          "confirmed_by_user": true,
+          "agent_id": "/root/trial_physics_lead"
+        },
+        "architect": {
+          "model": "gpt-6.1-sol",
+          "effort": "medium",
+          "confirmed_by_user": true,
+          "agent_id": "/root/trial_physics_lead/architect"
+        },
+        "implementer": {
+          "model": "gpt-6.1-sol",
+          "effort": "medium",
+          "confirmed_by_user": true,
+          "agent_id": "/root/trial_physics_lead/implementer"
+        },
+        "reviewer": {
+          "model": "gpt-6.1-sol",
+          "effort": "medium",
+          "confirmed_by_user": true,
+          "agent_id": "/root/trial_physics_lead/reviewer"
+        },
+        "physics_reviewer": {
+          "model": "gpt-6.1-sol",
+          "effort": "medium",
+          "confirmed_by_user": true,
+          "agent_id": "/root/trial_physics_lead/physics_reviewer"
+        }
+      },
+      "source_hashes": {
+        "oscillator.py": "109daea5138465b083c90f47ca2ab8f6b812eda5db5b73e06ff0d1d043caf067",
+        "test_oscillator.py": "30bb3b4f28b181529b537a234e0cdd3752891350e4efcff643f5e5d1b26a2220"
+      },
+      "acceptance": "PASS finite case only"
+    },
+    "classic": {
+      "run_id": "b1c46ce1e70740dc8afbf29b294e168c",
+      "design_id": "2e33e2bad7e95f44181c71a66e49f54144d6c05aecfa9b58c72b48a1095813e9",
+      "snapshot_id": "b58c8cc496e6a466d10360c9b6d244e1677721986c5514a57580c5f71422d39f",
+      "roles": {
+        "sentry": {
+          "model": "gpt-6.1-sol",
+          "effort": "medium",
+          "confirmed_by_user": true,
+          "agent_id": "/root/trial_classic_sentry"
+        },
+        "debater": {
+          "model": "gpt-6.1-sol",
+          "effort": "medium",
+          "confirmed_by_user": true,
+          "agent_id": "/root/trial_classic_debater"
+        },
+        "laborer": {
+          "model": "gpt-6.1-sol",
+          "effort": "medium",
+          "confirmed_by_user": true,
+          "agent_id": "/root/trial_classic_laborer"
+        }
+      },
+      "source_hashes": {
+        "status_counts.py": "99629bc970950d17f5ebcce688452c215231778e2cd0028b6ad55dffa66e71f4",
+        "test_status_counts.py": "536fb028a8dcb13566fe651e7f06a1bf53de0d1707dae33824bfd4d0939b4cce"
+      },
+      "acceptance": "PASS finite case only"
+    }
+  },
+  "files": [
+    {
+      "path": "classic/status_counts.py",
+      "sha256": "99629bc970950d17f5ebcce688452c215231778e2cd0028b6ad55dffa66e71f4"
+    },
+    {
+      "path": "classic/test_status_counts.py",
+      "sha256": "536fb028a8dcb13566fe651e7f06a1bf53de0d1707dae33824bfd4d0939b4cce"
+    },
+    {
+      "path": "engineering/oscillator.py",
+      "sha256": "109daea5138465b083c90f47ca2ab8f6b812eda5db5b73e06ff0d1d043caf067"
+    },
+    {
+      "path": "engineering/test_oscillator.py",
+      "sha256": "30bb3b4f28b181529b537a234e0cdd3752891350e4efcff643f5e5d1b26a2220"
+    },
+    {
+      "path": "evidence/classic/acceptance.md",
+      "sha256": "4b568451a3fdc6064902baae411c6c8a0419ffde3d7eec0829d2c54cfd39727d"
+    },
+    {
+      "path": "evidence/classic/delivery-probe.json",
+      "sha256": "4426ac99eca458e71742f464a069de4c73999c18cb797a0338e56ac7f4b0333f"
+    },
+    {
+      "path": "evidence/classic/delivery-review-v2.json",
+      "sha256": "36ff721aa038f917d1b20efb37cb6c620581da6d384ae6379be6af873779c7dd"
+    },
+    {
+      "path": "evidence/classic/delivery-review.json",
+      "sha256": "5b6836c51639e19fcc4cf7b3a917d8efd8138225e69249b7b6d5dabbfec18071"
+    },
+    {
+      "path": "evidence/classic/delivery-unit.json",
+      "sha256": "54915ca5143b70fdc0692c48a621c30f49d00f0bc7c61a86988a3fde29f9ec9f"
+    },
+    {
+      "path": "evidence/classic/delivery-v2-probe.json",
+      "sha256": "e676489ab8eabb8caa514ecab81a14d31e060dd4f82d56d1cd89f327edca3562"
+    },
+    {
+      "path": "evidence/classic/delivery-v2-unit.json",
+      "sha256": "68319ce22d40b573efc718ff463d62dd5a95db69430736b25af023d652ff767d"
+    },
+    {
+      "path": "evidence/classic/design-hash-command.json",
+      "sha256": "ec540ef9ad9f35c482367a5d2f0722dcfae6a02d2b070b00d501be5d40eafc0c"
+    },
+    {
+      "path": "evidence/classic/design-review-v1.json",
+      "sha256": "a98752846b738b4934febfab6f788c02d68521acaa8d3fb1808e55d852aa8e13"
+    },
+    {
+      "path": "evidence/classic/design-review-v2.json",
+      "sha256": "27e790b225c364b75017d83c936fad158bc96e97b737ee76aad33b386f8785d6"
+    },
+    {
+      "path": "evidence/classic/design-v1.md",
+      "sha256": "015d210da5b7ee08850a4c3696c778024f7058ecb40aa21310bb42bbbe8559f6"
+    },
+    {
+      "path": "evidence/classic/design-v2-hash-command.json",
+      "sha256": "28a656f87b1db14d82faedc988b65034c9791c19420687dc53bf167fd5bb463c"
+    },
+    {
+      "path": "evidence/classic/design-v2.md",
+      "sha256": "2e33e2bad7e95f44181c71a66e49f54144d6c05aecfa9b58c72b48a1095813e9"
+    },
+    {
+      "path": "evidence/classic/events.jsonl",
+      "sha256": "cb1c2a1b0e2a1c7ecb7a8b75487e81a5bbab4a0913e5822990a22bf3632a8c3b"
+    },
+    {
+      "path": "evidence/classic/final-check-command.json",
+      "sha256": "46ed516c31d5a3b8d1789ce004e5f041cb427062748dc87d5f3c6cbe43512f68"
+    },
+    {
+      "path": "evidence/classic/freeze-command.json",
+      "sha256": "a1a7f521d6c78d56d2607da05cb004ec9ea3d438989802fc40d97e5c4a1e16dd"
+    },
+    {
+      "path": "evidence/classic/freeze-v2-command.json",
+      "sha256": "f5b3b995212f70bee63bd8f7f7561c3ca8072781dfb8ebd20d6dbbf8054099b1"
+    },
+    {
+      "path": "evidence/classic/frozen-review-v1-correction.json",
+      "sha256": "14bd5828522f3719dea54ba01d2c4b418e434487e00b3aa4f3803fba3153d4b0"
+    },
+    {
+      "path": "evidence/classic/frozen-review-v1-initial.json",
+      "sha256": "d01aafd667fdfd4be4a2beed8e7c4d7a36d9472727d2d7892530bec80aec2df4"
+    },
+    {
+      "path": "evidence/classic/frozen-review-v2-final.json",
+      "sha256": "1d438995ddfec9a14d83af97ab448a9c8dc73381a29f81c0e5c4c63d2ef7a6a7"
+    },
+    {
+      "path": "evidence/classic/frozen-v1-probe.json",
+      "sha256": "195745480fa7232a3577d2afe11f305c1f0afdfa61d118250474c34f72812eec"
+    },
+    {
+      "path": "evidence/classic/frozen-v1-subclass-failure.json",
+      "sha256": "9e55810791582ce403cf8d8ffc2c542a632a6ec105c4ce834cdf89c89eef5418"
+    },
+    {
+      "path": "evidence/classic/frozen-v1-unit.json",
+      "sha256": "c242558649a76e4f9af7c032ca0122032268e8cb0e2b3edef848efbf37b95ad7"
+    },
+    {
+      "path": "evidence/classic/frozen-v2-probe.json",
+      "sha256": "27d6d7e69bd7ca227248023523c0be9d865199e71332e4c456d1972003e3cb72"
+    },
+    {
+      "path": "evidence/classic/frozen-v2-unit.json",
+      "sha256": "e2328f81d6263912e86aaf2311d3bbac7e08e6e3ff562c11dbc3b8a25009a4e4"
+    },
+    {
+      "path": "evidence/classic/readonly_capture.py",
+      "sha256": "765b9bddf4bb68d3d8c53dd53fa6bcee3a96afdcb25c794a8656a7fc80cd0c4c"
+    },
+    {
+      "path": "evidence/classic/run.json",
+      "sha256": "e6455a3e5e24a408bb04baeafa448b949da20c051b5faf0f2212e55d999151c4"
+    },
+    {
+      "path": "evidence/classic/scope-v1.json",
+      "sha256": "5c7ae3a428d7f1378b27040b3a1eeed3df98e181a70d35390ab1f47b8a6ece79"
+    },
+    {
+      "path": "evidence/classic/scope-v2.json",
+      "sha256": "fff87b511fd1b9ff74442b3243693d40c2c5cf51711a3e4e1ede7d2538594619"
+    },
+    {
+      "path": "evidence/classic/self-test/evidence-6f54c726fa3d404e82a601dda36ce8be/evidence.json",
+      "sha256": "7c6cfa29f731f0d562ec541736cc2f69373320a78d808a684e28571185416d3e"
+    },
+    {
+      "path": "evidence/classic/self-test/evidence-6f54c726fa3d404e82a601dda36ce8be/stderr.log",
+      "sha256": "21a0fb6aa8ad85e038ca71b5633d6ad0b4447f8538f70a71653703fcecbcc8eb"
+    },
+    {
+      "path": "evidence/classic/self-test/evidence-6f54c726fa3d404e82a601dda36ce8be/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/classic/self-test-v2/evidence-af920dffb9c8494e9c9475e69160fa3b/evidence.json",
+      "sha256": "e149c343b4735d03f31d0f1060cb5f248e63ae51c0e8e2d3224b600cd9c0a87b"
+    },
+    {
+      "path": "evidence/classic/self-test-v2/evidence-af920dffb9c8494e9c9475e69160fa3b/stderr.log",
+      "sha256": "bfa2d757692fbd1a7cafe2afcaa1aa72c9e1fe483e4f77ea4808927dbba7c45d"
+    },
+    {
+      "path": "evidence/classic/self-test-v2/evidence-af920dffb9c8494e9c9475e69160fa3b/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/classic/snapshots/snapshot-7af7e869a80a43bea3e11ddcba3e0c35/files/status_counts.py",
+      "sha256": "99629bc970950d17f5ebcce688452c215231778e2cd0028b6ad55dffa66e71f4"
+    },
+    {
+      "path": "evidence/classic/snapshots/snapshot-7af7e869a80a43bea3e11ddcba3e0c35/files/test_status_counts.py",
+      "sha256": "536fb028a8dcb13566fe651e7f06a1bf53de0d1707dae33824bfd4d0939b4cce"
+    },
+    {
+      "path": "evidence/classic/snapshots/snapshot-7af7e869a80a43bea3e11ddcba3e0c35/scope.json",
+      "sha256": "fff87b511fd1b9ff74442b3243693d40c2c5cf51711a3e4e1ede7d2538594619"
+    },
+    {
+      "path": "evidence/classic/snapshots/snapshot-7af7e869a80a43bea3e11ddcba3e0c35/snapshot.json",
+      "sha256": "c934725bfcd64ff5a825eef1f56d75d40abcce84b349ab174ca6ed50aa545b7c"
+    },
+    {
+      "path": "evidence/classic/snapshots/snapshot-cfe304100de24d38a2be739c08952312/files/status_counts.py",
+      "sha256": "ef8a55ce3cc490a0dcb042ef6c09df35e8f323530985c51c4f5e62aa5d0c8268"
+    },
+    {
+      "path": "evidence/classic/snapshots/snapshot-cfe304100de24d38a2be739c08952312/files/test_status_counts.py",
+      "sha256": "431e29458edbaa40f7f9f90c1b99a41f8afc42aad7a444f901435d6be10be9aa"
+    },
+    {
+      "path": "evidence/classic/snapshots/snapshot-cfe304100de24d38a2be739c08952312/scope.json",
+      "sha256": "5c7ae3a428d7f1378b27040b3a1eeed3df98e181a70d35390ab1f47b8a6ece79"
+    },
+    {
+      "path": "evidence/classic/snapshots/snapshot-cfe304100de24d38a2be739c08952312/snapshot.json",
+      "sha256": "e5f2cc7c29a80b2123da850e8c967c43e32724798fe06392620cfeb8cadc88ea"
+    },
+    {
+      "path": "evidence/engineering/acceptance.md",
+      "sha256": "16baef64a1632b595a4958d164ac3c25c0c82794883ab2fb47d95936312f1c0b"
+    },
+    {
+      "path": "evidence/engineering/architect-transcription-confirmation.md",
+      "sha256": "aed54b2aa6dd2450c7c09b35aeef454e8fbd5eaf59f1754c6101982580a44665"
+    },
+    {
+      "path": "evidence/engineering/design-v1.md",
+      "sha256": "a4004d1d22ebd3c55af012fb7e10f9982c8f79ac249f2cb928d1e1575c8be441"
+    },
+    {
+      "path": "evidence/engineering/engineering-delivery-review.md",
+      "sha256": "dd490eabeadc451348c02b7dbba03ed8b7bf7b9d319ec54aeccc6f16a8325024"
+    },
+    {
+      "path": "evidence/engineering/engineering-design-review.md",
+      "sha256": "5d69ce97366ed5f85de8bb8d353bdeae77a7f4be52454d514ea7d86f5a4cc6ab"
+    },
+    {
+      "path": "evidence/engineering/engineering-frozen-review.md",
+      "sha256": "789443fb6f286bffae2cc73bf7a87c34c8dd9f7e3cc0f4bf4f9535ce2541feb6"
+    },
+    {
+      "path": "evidence/engineering/events.jsonl",
+      "sha256": "22f8e698bbd6b383e5636309182c28d27e6a82b17c6e27fbffc1cf80c5247343"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-17fe1f0bb208495c858c4b6c59f5ca48/evidence.json",
+      "sha256": "88f0062517a2d7cabcccf85c2480e05639897e63be50d6245027c24424a07d86"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-17fe1f0bb208495c858c4b6c59f5ca48/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-17fe1f0bb208495c858c4b6c59f5ca48/stdout.log",
+      "sha256": "7fb57ff32ad9797c568071ea07a4a1cc03107ec08957f360971b3b29991902d2"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-5547a0d207c143d09f057efdbb0a56e5/evidence.json",
+      "sha256": "cd44e4ce8efb99b7ae8b343e0fc2bb4ade55679d0253e9ed3b5f5101dd119a21"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-5547a0d207c143d09f057efdbb0a56e5/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-5547a0d207c143d09f057efdbb0a56e5/stdout.log",
+      "sha256": "ebad1c93b1a255fe7864556d932ccaf4b84c5e927e47ac05bdf233ec3e397774"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-bb90aefb60164f23a3ffaf518705a507/evidence.json",
+      "sha256": "4d89dfae4e1687a5de2741295a601579aa0c38bf875a5d8a94b8aae4e0d8b339"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-bb90aefb60164f23a3ffaf518705a507/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-bb90aefb60164f23a3ffaf518705a507/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-c06042eb57e9448e8a5fd68d7cd629cd/evidence.json",
+      "sha256": "d700cf7225b163e6a6a6470d987d5e61a537a17c53ade5849243af2704b9cfc3"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-c06042eb57e9448e8a5fd68d7cd629cd/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-c06042eb57e9448e8a5fd68d7cd629cd/stdout.log",
+      "sha256": "0a120738b5e8004374def931f1f3b20ea828e2e80e51aa38263493f78e29326f"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-d8cedc18c7c5467db0aa09e31bb8e43e/evidence.json",
+      "sha256": "8f4ef1ff72754745a59e504f1c1cd44f2176b6e2faeef60f05c1e41e817c9575"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-d8cedc18c7c5467db0aa09e31bb8e43e/stderr.log",
+      "sha256": "274c799e74ed23465bab78fc1bfba28a3b3334a9871e667bee725482307657ab"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-d8cedc18c7c5467db0aa09e31bb8e43e/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-d8dcfbe79e0a4e9d90fd9dbfab633ee9/evidence.json",
+      "sha256": "859d486d6ce1930603cf54dea8ab3eede75611480a4f631ac8d4e4db3b22328e"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-d8dcfbe79e0a4e9d90fd9dbfab633ee9/stderr.log",
+      "sha256": "274c799e74ed23465bab78fc1bfba28a3b3334a9871e667bee725482307657ab"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-d8dcfbe79e0a4e9d90fd9dbfab633ee9/stdout.log",
+      "sha256": "5ad9086ce556b9bbae25d021686c4ffe7fa26f64a179878ca6ce5fb9d964e044"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-e26dabeb64244df4b03db99839fb5f43/evidence.json",
+      "sha256": "75b10c3768da0774f98cf3a62e942ef4af66bbf4328c89423df0f2cc125e26ab"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-e26dabeb64244df4b03db99839fb5f43/stderr.log",
+      "sha256": "274c799e74ed23465bab78fc1bfba28a3b3334a9871e667bee725482307657ab"
+    },
+    {
+      "path": "evidence/engineering/evidence/evidence-e26dabeb64244df4b03db99839fb5f43/stdout.log",
+      "sha256": "992c5a29ee97d0a6b7b6d6dcf2faba9ce4756071c02856a56180d2f1389695bc"
+    },
+    {
+      "path": "evidence/engineering/freeze-command-record.md",
+      "sha256": "365b4a8b781feac4bc83a90ce8551f7e5f55cfcc9ae82fe7c57a7a7462a5ce64"
+    },
+    {
+      "path": "evidence/engineering/implementation-delivery.md",
+      "sha256": "da677df38d767590b97fbbb8e54a880caca103c7a75f3c30f8236e4271af002e"
+    },
+    {
+      "path": "evidence/engineering/lead-scope.md",
+      "sha256": "851ef22d0cf0c8d18547db2621f9a0f8ce241462872ab1a6bd46f3b8b632e32a"
+    },
+    {
+      "path": "evidence/engineering/physics-design-review.md",
+      "sha256": "cff185cd149be6f5cdd3bdb5882bc2a62369c278900e82844df73bbfc507335c"
+    },
+    {
+      "path": "evidence/engineering/physics-frozen-review.md",
+      "sha256": "83dd66b999d6b7ff697ce2e48f384144933d44bad559c5868ed3a534b20bb3cc"
+    },
+    {
+      "path": "evidence/engineering/run.json",
+      "sha256": "8c0532d05f3757a9bc0ac31d6908aeccaa4c3abc138fae12f214b9bae6dfe2ef"
+    },
+    {
+      "path": "evidence/engineering/scope.json",
+      "sha256": "48064d081e98f36f71bf3116f5ab81a0d73320be3aa94b8749570174c14ca64b"
+    },
+    {
+      "path": "evidence/engineering/snapshots/snapshot-2f3d4bd9628a4e4b8cfadfacdab190e4/files/oscillator.py",
+      "sha256": "109daea5138465b083c90f47ca2ab8f6b812eda5db5b73e06ff0d1d043caf067"
+    },
+    {
+      "path": "evidence/engineering/snapshots/snapshot-2f3d4bd9628a4e4b8cfadfacdab190e4/files/test_oscillator.py",
+      "sha256": "30bb3b4f28b181529b537a234e0cdd3752891350e4efcff643f5e5d1b26a2220"
+    },
+    {
+      "path": "evidence/engineering/snapshots/snapshot-2f3d4bd9628a4e4b8cfadfacdab190e4/scope.json",
+      "sha256": "48064d081e98f36f71bf3116f5ab81a0d73320be3aa94b8749570174c14ca64b"
+    },
+    {
+      "path": "evidence/engineering/snapshots/snapshot-2f3d4bd9628a4e4b8cfadfacdab190e4/snapshot.json",
+      "sha256": "e8cd96ad036a3e7c90c7668ab0c5f7f2d13ab52edbffc0fcf789a3b14eed848d"
+    },
+    {
+      "path": "publication-checks.json",
+      "sha256": "b7647eed87bd33812e56be11c3a2348492eed28b7a8d58b92d28f25d0ac46fa7"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a27b8f5e26fac4bdd19030715af2eb41c1e66a5ae71c572c82cb34d0bb3bbb41"
+    }
+  ],
+  "preservation": "validation/** -text; original command outputs and snapshot bytes retained",
+  "coverage": "Finite actual-role trials, not all branches, models, platforms or production physics.",
+  "observed_local_skill_hashes_unchanged": {
+    "skills/agent-normal/SKILL.md": "10adb8082d30b727ba7a2531c719fc2dd5def43382a75375c854b7515ed8bb8a",
+    "skills/agent-normal/agents/openai.yaml": "434428cc05a87352bd624f84c43a2ac8d868964454df570356f6482283197a70",
+    "skills/agent-physics/SKILL.md": "2a072efe21e5acc3179e7aa4e529cf82bf5dabc37a968164c47d479864c3ad77",
+    "skills/agent-physics/agents/openai.yaml": "c0c9cfda8ba15c5aac49873ceef6c3ef0d54cf52051a288f52fc621ebfc2f64a",
+    "skills/agent-team-skill/SKILL.md": "a071bd0d3fcc71975cb1905273121d0959dbd26566269be7b5f993ae0b450aca",
+    "skills/agent-team-skill/agents/openai.yaml": "852a82c20e9be7c187d99e3cbe1d27703ccd3e1453616ecd8d96e719b85ff907",
+    "skills/agent-team-skill/references/records.md": "a0c92e161dbad6a330f2f1fa3a98226137d7251213e24ab1dc1fb4e100ae7177",
+    "skills/agent-team-skill/roles/architect.toml": "76c1e5e188e2060fdb619915674266fefb57db654458aa10ef83557217a35cb7",
+    "skills/agent-team-skill/roles/debater.toml": "ba61f89d79848fd99f88c0adb9146347790c7965242ad4ed474a294778cbb1f7",
+    "skills/agent-team-skill/roles/implementer.toml": "780f3fb05a685c689d1c78bcc365eb989fda425f995fe90214cf1ed27f7e2ccb",
+    "skills/agent-team-skill/roles/laborer.toml": "a78ee4a5f2a9b5c26393a7e5f3e07ceedf871d10b977d040b8b25877c42528a2",
+    "skills/agent-team-skill/roles/lead.toml": "377c88f5ebdaf7e9f37aca654597f6a27fb5a053bd5587aee17fdc7445d47c16",
+    "skills/agent-team-skill/roles/physics_reviewer.toml": "bdf09f5e6be0b7b87b6bc157509f215c85db3e6f03f302353d2dd32aff45c8e0",
+    "skills/agent-team-skill/roles/reviewer.toml": "b66d79d7a7f74164d2d26d026d35adb0275f76d1baee0d0a5cb62c9cef9679c9",
+    "skills/agent-team-skill/roles/sentry.toml": "6e9e287f6f9b45e9cbc26d3d7d23ce557ce182c102a7fb9158f59072a7ec8158",
+    "skills/agent-team-skill/scripts/evidence.py": "3a15e0c844323dcf4614820bfa441d88b709ba2bb032d92962af400d92df36b1",
+    "skills/agent-team-skill/scripts/test_evidence.py": "bf3cb6df163d1c86c4a88533fc135a6f5ec18d07cfb6f2c972007489a806a40b"
+  },
+  "baseline_git_blob_skill_sha256": {
+    "skills/agent-normal/SKILL.md": "10adb8082d30b727ba7a2531c719fc2dd5def43382a75375c854b7515ed8bb8a",
+    "skills/agent-normal/agents/openai.yaml": "434428cc05a87352bd624f84c43a2ac8d868964454df570356f6482283197a70",
+    "skills/agent-physics/SKILL.md": "2a072efe21e5acc3179e7aa4e529cf82bf5dabc37a968164c47d479864c3ad77",
+    "skills/agent-physics/agents/openai.yaml": "c0c9cfda8ba15c5aac49873ceef6c3ef0d54cf52051a288f52fc621ebfc2f64a",
+    "skills/agent-team-skill/SKILL.md": "a071bd0d3fcc71975cb1905273121d0959dbd26566269be7b5f993ae0b450aca",
+    "skills/agent-team-skill/agents/openai.yaml": "852a82c20e9be7c187d99e3cbe1d27703ccd3e1453616ecd8d96e719b85ff907",
+    "skills/agent-team-skill/references/records.md": "a0c92e161dbad6a330f2f1fa3a98226137d7251213e24ab1dc1fb4e100ae7177",
+    "skills/agent-team-skill/roles/architect.toml": "76c1e5e188e2060fdb619915674266fefb57db654458aa10ef83557217a35cb7",
+    "skills/agent-team-skill/roles/debater.toml": "466279b127557a33dadb0399fee874dee52a998cc117d352f6f681ebd4888a32",
+    "skills/agent-team-skill/roles/implementer.toml": "780f3fb05a685c689d1c78bcc365eb989fda425f995fe90214cf1ed27f7e2ccb",
+    "skills/agent-team-skill/roles/laborer.toml": "d218cba04d77910b96485591de76d10ed14e5d94b4d3c9480d25d255eaabce63",
+    "skills/agent-team-skill/roles/lead.toml": "377c88f5ebdaf7e9f37aca654597f6a27fb5a053bd5587aee17fdc7445d47c16",
+    "skills/agent-team-skill/roles/physics_reviewer.toml": "bdf09f5e6be0b7b87b6bc157509f215c85db3e6f03f302353d2dd32aff45c8e0",
+    "skills/agent-team-skill/roles/reviewer.toml": "b66d79d7a7f74164d2d26d026d35adb0275f76d1baee0d0a5cb62c9cef9679c9",
+    "skills/agent-team-skill/roles/sentry.toml": "24d6fb607b724ccce5a44956ce0fba88f229dce0c29a684cc6a7ab567907be6b",
+    "skills/agent-team-skill/scripts/evidence.py": "3a15e0c844323dcf4614820bfa441d88b709ba2bb032d92962af400d92df36b1",
+    "skills/agent-team-skill/scripts/test_evidence.py": "bf3cb6df163d1c86c4a88533fc135a6f5ec18d07cfb6f2c972007489a806a40b"
+  }
+}
