@@ -1,0 +1,20 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "agent-team-skill",
+  "version": "0.1.0",
+  "description": "手动调用的工程物理与经典 agents 集群技能，逐角色确认模型并保留独立审查及验证证据。",
+  "author": {
+    "name": "T-Choicy"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "agent-team-skill",
+        "shortDescription": "手动 agents 集群与独立审查",
+        "longDescription": "包含 agent-team-skill、agent-physics 和 agent-normal 三个技能。集群默认休眠，每次逐角色确认模型与推理强度。使用 Codex 原生协作工具和本地证据脚本。",
+        "developerName": "T-Choicy",
+        "category": "Productivity"
+      }
+    }
+  }
+}

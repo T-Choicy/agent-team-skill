@@ -13,6 +13,37 @@
 
 ## 安装
 
+### Codex marketplace（推荐）
+
+在支持 `codex plugin` 的 Codex CLI 中执行：
+
+```text
+codex plugin marketplace add T-Choicy/agent-team-skill
+codex plugin add agent-team-skill@t-choicy-skills
+```
+
+这会一起安装三个技能。marketplace 是本仓库提供的分发源，不代表已上架 OpenAI 官方公共市场。安装包仅包含技能与本地证据脚本，不注册 MCP 服务、侧栏面板、全局 agent 类型或后台进程；安装本身不唤醒集群。
+
+安装后重新加载 Codex 技能，或重启 Codex。若已手动安装同名技能，应只启用其中一种安装来源，避免重复入口；安装包不会自动删除已有技能。
+
+marketplace 安装的技能会带包名前缀。可在技能菜单中选择 `agent-physics`、`agent-normal`，也可以明确引用完整名称 `$agent-team-skill:agent-physics`、`$agent-team-skill:agent-normal` 或 `$agent-team-skill:agent-team-skill`。
+
+更新时刷新 marketplace，再安装该包：
+
+```text
+codex plugin marketplace upgrade t-choicy-skills
+codex plugin add agent-team-skill@t-choicy-skills
+```
+
+卸载 marketplace 安装的包：
+
+```text
+codex plugin remove agent-team-skill@t-choicy-skills
+codex plugin marketplace remove t-choicy-skills
+```
+
+### 手动安装
+
 将仓库 `skills/` 下的三个目录复制到用户的 Codex 技能目录（默认 `~/.codex/skills/`），保留它们的相邻目录关系。已有同名技能时先核对本地修改，再决定是否替换。重新加载技能后使用以上入口。
 
 ```text

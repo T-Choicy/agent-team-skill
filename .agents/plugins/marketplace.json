@@ -1,0 +1,20 @@
+{
+  "name": "t-choicy-skills",
+  "interface": {
+    "displayName": "T-Choicy Skills"
+  },
+  "plugins": [
+    {
+      "name": "agent-team-skill",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
